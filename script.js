@@ -11,3 +11,6 @@ const displayInput = formData.addEventListener("submit", function (e) {
 });
 
 //rendering html
+let html = "<li>This is a task. <button>Delete</button></li>";
+
+listData.insertAdjacentHTML("afterbegin", html);
