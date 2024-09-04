@@ -1,7 +1,8 @@
-//grab form data from user inputs
+// Grabbing DOM Elements
 const formData = document.querySelector(".formContainer");
 const listData = document.querySelector(".listContainer");
 
+// Adding List Item When there is a submission
 const displayInput = formData.addEventListener("submit", function (e) {
   e.preventDefault();
 
@@ -14,3 +15,9 @@ const displayInput = formData.addEventListener("submit", function (e) {
   li.innerHTML = userInput;
   listData.appendChild(li);
 });
+
+// Delete Item
+
+// Cross Off Item
+
+// Add To Local Storage
