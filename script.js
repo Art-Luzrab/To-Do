@@ -8,9 +8,9 @@ const displayInput = formData.addEventListener("submit", function (e) {
   const userInput = document.getElementById("userInput").value;
   document.getElementById("userInput").value = "";
   console.log(userInput);
+
+  let li = document.createElement("li");
+
+  li.innerHTML = userInput;
+  listData.appendChild(li);
 });
-
-//rendering html
-let html = "<li>This is a task. <button>Delete</button></li>";
-
-listData.insertAdjacentHTML("afterbegin", html);
