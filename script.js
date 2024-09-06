@@ -1,3 +1,4 @@
+"use strict";
 // Grabbing DOM Elements
 const formData = document.querySelector(".formContainer");
 const listData = document.querySelector(".listContainer");
@@ -16,10 +17,16 @@ const displayInput = formData.addEventListener("submit", function (e) {
 
   let deleteBtn = document.createElement("button");
   deleteBtn.textContent = "Delete";
+  deleteBtn.classList.add("delete-btn");
   listData.appendChild(li);
-  listData.appendChild(deleteBtn);
+  li.appendChild(deleteBtn);
 
   document.getElementById("userInput").value = "";
+});
+
+listData.addEventListener("click", function (e) {
+  const listItem = e.target.closest("li");
+  listItem.remove();
 });
 
 /**  Delete Item
