@@ -12,6 +12,7 @@ const displayInput = formData.addEventListener("submit", function (e) {
   console.log(userInput);
 
   let li = document.createElement("li");
+  // li.classList.add("crossed");
 
   if (userInput === "") {
     alert("You must input a task!");
@@ -33,6 +34,12 @@ listData.addEventListener("click", function (e) {
   if (e.target.classList.contains("delete-btn")) {
     const listItem = e.target.closest("li");
     listItem.remove();
+  }
+});
+
+listData.addEventListener("click", function (e) {
+  if ((e.target.htmlElement = "LI")) {
+    e.target.classList.toggle("crossed");
   }
 });
 
