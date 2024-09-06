@@ -7,13 +7,19 @@ const displayInput = formData.addEventListener("submit", function (e) {
   e.preventDefault();
 
   const userInput = document.getElementById("userInput").value;
-  document.getElementById("userInput").value = "";
+
   console.log(userInput);
 
   let li = document.createElement("li");
 
   li.innerHTML = userInput;
+
+  let deleteBtn = document.createElement("button");
+  deleteBtn.textContent = "Delete";
   listData.appendChild(li);
+  listData.appendChild(deleteBtn);
+
+  document.getElementById("userInput").value = "";
 });
 
 /**  Delete Item
