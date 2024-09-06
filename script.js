@@ -13,15 +13,19 @@ const displayInput = formData.addEventListener("submit", function (e) {
 
   let li = document.createElement("li");
 
-  li.innerHTML = userInput;
+  if (userInput === "") {
+    alert("You must input a task!");
+  } else {
+    li.innerHTML = userInput;
 
-  let deleteBtn = document.createElement("button");
-  deleteBtn.textContent = "Delete";
-  deleteBtn.classList.add("delete-btn");
-  listData.appendChild(li);
-  li.appendChild(deleteBtn);
+    let deleteBtn = document.createElement("button");
+    deleteBtn.textContent = "Delete";
+    deleteBtn.classList.add("delete-btn");
+    listData.appendChild(li);
+    li.appendChild(deleteBtn);
 
-  document.getElementById("userInput").value = "";
+    document.getElementById("userInput").value = "";
+  }
 });
 
 /**  Delete Item   */
