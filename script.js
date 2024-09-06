@@ -1,3 +1,4 @@
+"use strict";
 // Grabbing DOM Elements
 const formData = document.querySelector(".formContainer");
 const listData = document.querySelector(".listContainer");
@@ -7,20 +8,29 @@ const displayInput = formData.addEventListener("submit", function (e) {
   e.preventDefault();
 
   const userInput = document.getElementById("userInput").value;
-  document.getElementById("userInput").value = "";
+
   console.log(userInput);
 
   let li = document.createElement("li");
 
   li.innerHTML = userInput;
+
+  let deleteBtn = document.createElement("button");
+  deleteBtn.textContent = "Delete";
+  deleteBtn.classList.add("delete-btn");
   listData.appendChild(li);
+  li.appendChild(deleteBtn);
+
+  document.getElementById("userInput").value = "";
 });
 
-/**  Delete Item
-    1) render delete btn to li items
-    2) addEventListener to button that will...
-    3) removeChild()
-    */
+/**  Delete Item   */
+listData.addEventListener("click", function (e) {
+  if (e.target.classList.contains("delete-btn")) {
+    const listItem = e.target.closest("li");
+    listItem.remove();
+  }
+});
 
 /**Cross Off Item
     1) addClassName to li 
