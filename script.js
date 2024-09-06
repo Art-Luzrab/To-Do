@@ -24,16 +24,13 @@ const displayInput = formData.addEventListener("submit", function (e) {
   document.getElementById("userInput").value = "";
 });
 
+/**  Delete Item   */
 listData.addEventListener("click", function (e) {
-  const listItem = e.target.closest("li");
-  listItem.remove();
+  if (e.target.classList.contains("delete-btn")) {
+    const listItem = e.target.closest("li");
+    listItem.remove();
+  }
 });
-
-/**  Delete Item
-    1) render delete btn to li items
-    2) addEventListener to button that will...
-    3) removeChild()
-    */
 
 /**Cross Off Item
     1) addClassName to li 
