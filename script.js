@@ -26,6 +26,7 @@ const displayInput = formData.addEventListener("submit", function (e) {
     li.appendChild(deleteBtn);
 
     document.getElementById("userInput").value = "";
+    saveData();
   }
 });
 
@@ -34,24 +35,28 @@ listData.addEventListener("click", function (e) {
   if (e.target.classList.contains("delete-btn")) {
     const listItem = e.target.closest("li");
     listItem.remove();
+    saveData();
   }
 });
 
+//Cross Off Item
 listData.addEventListener("click", function (e) {
   if ((e.target.htmlElement = "LI")) {
     e.target.classList.toggle("crossed");
+    saveData();
   }
 });
 
-/**Cross Off Item
-    1) addClassName to li 
-    2) add CSS styling 'crossing off effect' 
-      a) ul li.(className here): text-decoration-line-through
-    3) toggleClassNames (on click)
-    4) magic
-
-*/
 /**  Add To Local Storage
     1) create function with localstorage('data', innerHTML)
     2) render local storage function
 */
+
+const saveData = function () {
+  localStorage.setItem("data", listData.innerHTML);
+};
+
+const getData = function () {
+  listData.innerHTML = localStorage.getItem("data");
+};
+getData();
