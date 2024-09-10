@@ -1,3 +1,3 @@
 # To-Do
 
-A project made By Arthur Barzul and Julia Hocken
+A project made By Arthur Barzul and Julia Hocken.
