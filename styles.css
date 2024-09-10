@@ -2,11 +2,92 @@
   border: solid black;
 }
 
-.main h1 {
+body {
+  font-family: Arial, sans-serif;
+  background-color: #9ddcfb;
   display: flex;
   justify-content: center;
+  align-items: center;
+  height: 100vh;
 }
 
+.main {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: #f8f7f7e2;
+  max-width: 400px;
+  width: 100%;
+  padding: 20px;
+  border-radius: 30px;
+}
+
+/* form */
+.formContainer {
+  padding: 10px;
+  margin-bottom: 10px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  max-width: 500px;
+}
+
+#userInput {
+  width: 100%;
+  margin: 5px;
+}
+
+#subBttn {
+  padding: 5px 10px;
+  background-color: #35b81b;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  margin-left: 10px;
+}
+
+#subBttn:hover {
+  background-color: #268514;
+}
+
+/* list items */
+li {
+  list-style: none;
+
+  padding: 10px;
+  margin-bottom: 10px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-radius: 5px;
+  border: 1px solid #e1e1e1;
+
+  background-color: #f8f7f7;
+}
+
+.listContainer {
+  width: 100%;
+  max-width: 500px;
+}
+
+button {
+  padding: 5px 10px;
+  background-color: #ff4d4d;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  margin-left: 15px;
+}
+
+button:hover {
+  background-color: #e60000;
+}
+
+/* other */
 .crossed {
   text-decoration: line-through;
 }
